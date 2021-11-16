@@ -22,4 +22,4 @@ const isValidPermutation = (xs) => {
     return isValid;
 };
 
-module.exports = { isValidPermutation };
+module.exports = { isValidPermutation, hasDuplicateValues };
