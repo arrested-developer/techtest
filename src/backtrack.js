@@ -5,14 +5,14 @@ let iterations = 0;
 const backtrack = (solutions = [], digits = []) => {
     iterations++;
     
-    if (digits.length >= 2) {
+    if (digits.length === 2) {
         const productOfFirstTwoDigits = digits[0] * digits[1];
         if (productOfFirstTwoDigits !== 24) {
             return;
         }
     }
 
-    if (digits.length >= 3) {
+    if (digits.length === 3) {
         const sumOfOneAndThree = digits[0] + digits[2];
         const totalOfAllDigitsExceptSecond = 2 * sumOfOneAndThree;
         if (totalOfAllDigitsExceptSecond + digits[1] !== 22) {
@@ -20,7 +20,7 @@ const backtrack = (solutions = [], digits = []) => {
         }
     }
 
-    if (digits.length >= 4) {
+    if (digits.length === 4) {
         const secondDigitIsDoubleFourthDigit = digits[3] * 2 === digits[1];
         if (!secondDigitIsDoubleFourthDigit) {
             return;
